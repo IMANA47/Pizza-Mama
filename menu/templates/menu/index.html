@@ -9,7 +9,12 @@
     <p>Bienvenue dans notre menu de pizzas !</p>
     <h1>Nos pizzas :</h1>
     <ul>
-        <li>pizzas</li>
+        {% for pizza in pizzas %}
+            <li>{{ pizza.nom }} -  {{ pizza.ingredients }} - {{ pizza.prix }} FCFA</li>
+        {% endfor %}
     </ul>
+    <footer>
+        <p>&copy; 2026 <b>Pizza Mama.</b> Tous droits réservés.</p>
+    </footer>
 </body>
 </html>

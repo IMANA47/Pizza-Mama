@@ -9,4 +9,5 @@ def index(request):
     pizzas_names = [pizza.nom for pizza in pizzas]
     pizzas_names = ', '.join(pizzas_names)
     """
-    return render(request, 'menu/index.html')
+    pizzas = Pizza.objects.all()
+    return render(request, 'menu/index.html', {'pizzas': pizzas})
