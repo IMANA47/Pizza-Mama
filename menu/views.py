@@ -4,8 +4,9 @@ from .models import Pizza
 
 # Create your views here.
 def index(request):
+    """
     pizzas = Pizza.objects.all()
     pizzas_names = [pizza.nom for pizza in pizzas]
     pizzas_names = ', '.join(pizzas_names)
-    
-    return HttpResponse(f'Pizzas: {pizzas_names}')
+    """
+    return render(request, 'menu/index.html')
