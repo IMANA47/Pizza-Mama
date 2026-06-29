@@ -15,3 +15,22 @@ body {
     line-height: 1.5;
     color: #333;
 }
+
+/* Make logo responsive */
+.logo {
+    max-width: 100%;   /* Prevent overflow */
+    height: auto;      /* Maintain aspect ratio */
+}
+
+/* Optional: Adjust size for different devices */
+@media (max-width: 768px) {
+    .logo {
+        width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 100px;
+    }
+}
