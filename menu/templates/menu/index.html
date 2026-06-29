@@ -14,12 +14,19 @@
     <img src="{% static 'menu/images/small_logo.png' %}" alt="Site Logo" class="logo">
 </header>
     <p>Bienvenue dans notre menu de pizzas !</p>
-    <h1>Nos pizzas :</h1>
-    <ul>
+    
+    <div class="menu_title">
+        <h1>Nos pizzas :</h1>
+    </div>
+    <div class="menu_list">
         {% for pizza in pizzas %}
-            <li>{{ pizza.nom }} -  {{ pizza.ingredients }} - {{ pizza.prix }} FCFA</li>
+            <div class="menu_liste_item">
+                <span class="menu_liste_title">{{ pizza.nom }}</span> 
+                <span class="menu_liste_price">{{ pizza.prix }}€</span>
+                <span class="menu_liste_ingredients">{{ pizza.ingredients }}</span>
+            </div>
         {% endfor %}
-    </ul>
+    </div>
     <footer>
         <p>&copy; 2026 <b>Pizza Mama.</b> Tous droits réservés.</p>
     </footer>
