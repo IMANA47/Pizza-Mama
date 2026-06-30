@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-   <link rel="stylesheet" href="{% static 'menu/style.css' %}">
+    <link rel="stylesheet" href="{% static 'menu/css/style.css' %}">
+   <link rel="icon" href="{% static 'menu/images/small_logo.png' %}" type="image/png">
     <title>Menu des pizzas</title>
 </head>
 <body>
@@ -22,6 +22,10 @@
                 <span class="menu_liste_title">{{ pizza.nom }}</span> 
                 <span class="menu_liste_price">{{ pizza.prix }}€</span>
                 <span class="menu_liste_ingredients">{{ pizza.ingredients }}</span>
+              {% if pizza.vegetarienne %}
+                <span class="menu_liste_vegetarienne">Végétarienne</span>
+              {% endif %}
+         
             </div>
         {% endfor %}
     </div>
