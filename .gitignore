@@ -2,12 +2,15 @@
 __pycache__/
 *.py[cod]
 *$py.class
+*.pyc
+
+.venv/
+media/
 
 # Virtual Environment
 venv/
 env/
 ENV/
-.venv/
 
 # Django
 *.log
